@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam</title>
+    <link rel="icon" href="images/logo.png">
+     
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section id="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+    </section>
+ <!-- ______________________navbar______________________________________ -->
+    <div id="siderbar">
+        <div class="box">
+            <ul class="ulNavbar">
+                <li id="liSearch">Search</li>
+                <li id="liCategories">Categories</li>
+                <li id="liArea">Area</li>
+                <li id="liIngredients">Ingredients</li>
+                <li id="liContact">Contact Us</li>
+            </ul>
+            <div class="endNav">
+                <div>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-globe"></i>
+                <p>Copyright Â© 2019 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="iconss">
+            <img src="images/logo.png" class=" d-block icon1" alt="">
+            <i class="fa d-block icon2" id="openNav">☰</i>
+            <div class="icon3">
+                <i class="fas fa-globe d-block"></i>
+                <i class="fas fa-share-alt d-block"></i>
+            </div>
+        </div>
+        
+    </div>
+ <!-- ________________ home meal ____________________________________________ -->
+   <div id="homeMeal" class="row container m-auto pt-5">
+
+   </div> 
+
+ <!-- ______________ search ______________________________________ -->
+
+   <div id="search" class="search">
+        <div class="styleSearch d-block">
+            <input id="nameSearch" class="input1" type="text" placeholder="Search By Name">
+            <input id="letterSearch" class="input1" type="text" maxlength="1" placeholder="search By First Letter...">
+        </div>
+
+        <div id="displayNameSearch" class="row container m-auto pt-5 ">
+
+        </div>
+   </div>
+
+ 
+ <!-- ______________ Categories ___________________________________ -->
+   <div id="Categories" class="row container m-auto pt-5 ">
+
+   </div>
+
+ <!-- __________________ Area ______________________________________ -->
+   <div id="area" class="row w-75 m-auto pt-5 divArea">
+    
+   </div>
+   <!--___ mealArea -->
+   <div id="mealArea" class="row w-75 m-auto pt-5 ">
+    
+    </div>
+
+    <!-- __________________ Ingredients ______________________________________ -->
+   <div id="Ingredients" class="row w-75 m-auto pt-5 divArea">
+    
+   </div>
+
+
+
+   <!-- __________detailss_____________________ -->
+   <div id="details" class="details w-75 m-auto">
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+   <!-- _______________________ contact __________________________ -->
+   <section id="contact" class="container-fluid vh-100 bg-black  ">
+        <div class=" inputss m-auto w-75 text-center  ">
+            <h2 class="text-white mb-4">ContacUs...</h2>
+            <input onkeyup="isNameEnable()" id="nameInput" placeholder=" Enter Your Name" class= " p-1 fs-6 bg-transparent me-3  rounded-1  text-white d-inline-block text-center"/>
+            <input onkeyup="isEmailEnable()" id="emailInput" type="email" placeholder=" Enter Email" class=" p-1 ms-3 fs-6 bg-transparent  rounded-1 text-white d-inline-block text-center "/>
+            <div id="error" class="text-center m-0  d-inline-block"></div>
+            <div id="error1" class="text-start ps-0 m-0  d-inline-block"></div>
+            <input onkeyup="isPhoneEnable()" id="phoneInput" type="tel" placeholder=" Enter phone" class="  p-1  me-3 mt-3 fs-6 bg-transparent  rounded-1 text-white d-inline-block text-center"/>
+            <input onkeyup="isAgeEnable()" id="ageInput" type="number" placeholder=" Enter Age" class=" p-1 ms-3 mt-3 fs-6 bg-transparent rounded-1 text-white d-inline-block text-center "/>
+            <div id="error2" class="text-center m-0  d-inline-block"></div>
+            <div id="error3" class="text-start ps-0 m-0  d-inline-block"></div>
+            <input onkeyup="isPassEnable()" id="passwordInput" type="password" placeholder=" Enter password" class=" me-3 p-1 mt-3 fs-6 bg-transparent rounded-1  text-white d-inline-block text-center"/>
+            <input onkeyup="isRePassEnable()"id="rePasswordInput" type="password" placeholder=" Enter Repassword" class=" p-1 ms-3 mt-3 fs-6 bg-transparent  rounded-1 text-white d-inline-block text-center "/>
+            <div id="error4" class="text-center m-0  d-inline-block"></div>
+            <div id="error5" class="text-start ps-0 m-0  d-inline-block"></div>
+            <button id="singInBtn" class="d-block m-auto btn mt-4 m-2 btn btn-outline-danger disabled " onclick="singUp()">submit</button>
+
+        </div>
+    </section>
+  
+  <!-- ___________ end contact ___________________________________ -->
+
+    
+    <script src="js/jquery-3.6.1.min.js"></script>    
+    <script src="js/bootstrap.bundle.min.js"></script>    
+    <script src="js/index.js"></script>    
+    <script src="js/contact.js"></script>    
+</body>
+</html>

@@ -1,0 +1,462 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    overflow: hidden;
+}
+/* ____start loading screen_________________ */
+#loading{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    background-color: black;
+    z-index: 999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: white;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+
+/* ________________start siderBar _____________________*/
+#siderbar{
+  background-color: black ;
+  position: fixed;
+  left: 0px;
+  z-index: 99999;
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+}
+#siderbar .box{
+  color: white;
+  width: 250px;
+
+}
+.iconss{
+  background-color: white;
+  height: 100vh;
+  width: 50px;
+  text-align: center;
+    
+}
+#siderbar i{
+  color: black;
+  padding: 10px;
+}
+.icon1{
+  padding-top:25px;
+  width: 80%;
+  margin: auto;
+  cursor: pointer;
+}
+.icon2{
+  margin-top: 250;
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon3{
+  position: absolute;
+  bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.ulNavbar{
+  list-style: none;
+  position: absolute;
+  top: 50;
+}
+.ulNavbar li{
+  margin-top: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 200px;
+  
+}
+/* __________ animate li nav _____________ */
+#liSearch{
+  transition: all 1s ;
+  /* transition-property: top; */
+  transition-delay: 0;
+}
+#liCategories{
+  transition: all 1s 1s;
+  opacity: 0;
+
+}
+#liArea{
+  transition: all 1s 2s;
+  opacity: 0;
+
+}
+#liIngredients{
+  transition: all 1s 3s;
+  opacity: 0;
+
+}
+#liContact{
+  transition: all 1s 4s;
+  opacity: 0;
+}
+/* __________ end animate li nav _____________ */
+
+
+.endNav{
+  padding-left: 10px;
+  color: gray;
+  font-size: 15;
+  position: absolute;
+  bottom: 30px;
+}
+.endNav i{
+  color: gray !important;
+}
+
+/* ______________start home meal __________________________________ */
+.work-item img{
+  width: 100%;
+  transition: all 1s;
+}
+.work-item {
+  position: relative;
+  overflow: hidden;
+} 
+.work-layer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  background-color: rgba(255, 251, 251, 0.7);
+  opacity: 0;
+  transition: all .7s;
+}
+.work-item:hover .work-layer{
+  opacity: 1; 
+}
+.layer-work{
+  position: absolute;
+  top: 100%;
+  transition: all 1s;
+  transform: translateY(-50%);
+}
+.work-item:hover .layer-work{
+  top: 50%;
+}
+.work-item:hover .work-layer{
+  top: 0;
+}
+.nav-pills .nav-link.active{
+  background-color: var(--main-color) !important;
+}
+body{
+ font-family: 'Roboto Mono', monospace;
+}
+
+/* ___________________ Search _________________________ */
+.styleSearch {
+  /* height: 80vh; */
+   width: 80%;
+   margin: auto;
+   padding-top: 40px;
+   text-align: center;
+}
+.styleSearch input{
+  width: 40%;
+  background-color:transparent ;
+  border-bottom: 1px solid white;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  text-align: center;
+  padding: 8px;
+  margin-left:20px ;
+  font-size: 20px;
+  color:white ;
+  outline: none;
+}
+.input1[type="text"]:focus{
+  border-color: rgba(0, 123, 255 , .3);
+  border-bottom-color: white;
+  border-style: solid;
+}
+
+/* __________________ Categories ____________________*/
+.pCategories{
+  font-size: 5px;
+}
+
+/* __________________ Area _________________________ */
+.contArea{
+  text-align: center;
+  cursor: pointer;
+}
+.contArea h3{
+  color: white;
+  font-size: 35px;
+}
+.contArea i{
+  font-size: 60px;
+  color: #e65a50ab;
+}
+.contIngredients{
+  text-align: center;
+  cursor: pointer;
+  height: 200px;
+  overflow: hidden;
+}
+.contIngredients h3{
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+.contIngredients i{
+  width: 100%;
+  font-size: 60px;
+  color: #9ee650ab;
+  text-align: center;
+
+}
+.contIngredients p{
+  color: white;
+  text-align: center;
+  padding: 15px;
+
+}
+/* __________________ details _____________________ */
+.details{
+  color: white;
+}
+.Recipes{
+  width: 80%;
+}
+.Recipes h5{
+  padding: 10px;
+  color: black;
+  background-color: rgb(212,237,218);
+  border-radius: 10px;
+  margin: 5px;
+  margin-top: 10px;
+}
+.tags h5{
+  padding: 10px;
+  color: black;
+  background-color: rgb(248,215,218);
+  border-radius: 10px;
+}
+.part1 img{
+  width: 90%;
+  padding-right: 30;
+  border-radius: 0px;
+}
+.part1{
+  width: 50%;
+}
+.part2{
+  width: 50%;
+}
+span{
+  font-size: 20px;
+}
+.links{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.btnSource{
+  padding: 15px;
+  width: 130px;
+}
+.btnYoutube{
+  padding: 15px;
+  width: 130px;
+}
+#details{
+  display: flex ;
+}
+
+
+
+/* ________________________ contact _________________________ */
+.inputss input{
+  width: 35% !important;
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
+  box-shadow: 1px 2px 2px 2px rgb(102, 101, 101) !important;
+  cursor: pointer;
+ 
+}
+.col-lg-3{
+  cursor: pointer;
+}
+#error{
+ 
+  margin:left ;
+  width: 45%;
+  height: 20px !important;
+ 
+  
+
+}
+#error1{
+ 
+  margin:left ;
+  width: 45%;
+  height: 20px !important;
+ 
+  
+
+}
+#error p{
+
+  background-color:rgb(253, 218, 218) ;
+  margin-left: 97px !important;
+  width: 78%;
+
+}
+#error1{
+ 
+  margin:left ;
+  width: 45%;
+  height: 20px !important;
+ 
+  
+
+}
+#error1 p{
+
+  background-color:rgb(253, 218, 218) ;
+ margin-left: 16px !important;
+  width: 78%;
+  
+
+
+}
+#error2{
+ 
+  margin:left ;
+  width: 40%;
+  height: 20px !important;
+ 
+ 
+  
+
+}
+#error2 p{
+
+  background-color:rgb(253, 218, 218) ;
+  margin-left: 70px !important;
+  width: 88%;
+
+}
+#error3{
+ 
+  margin:left ;
+  width: 45%;
+  height: 20px !important;
+ 
+  
+
+}
+#error3 p{
+
+  background-color:rgb(253, 218, 218) ;
+ margin-left: 45px !important;
+  width: 78%;
+  
+
+
+}
+#error4{
+ 
+  margin:left ;
+  width: 40%;
+  height: 20px !important;
+ 
+ 
+  
+
+}
+#error4 p{
+
+  background-color:rgb(253, 218, 218) ;
+  margin-left: 70px !important;
+  width: 88%;
+
+}
+#error5{
+ 
+  margin:left ;
+  width: 45%;
+  height: 20px !important;
+ 
+  
+
+}
+#error5 p{
+
+  background-color:rgb(253, 218, 218) ;
+ margin-left: 45px !important;
+  width: 78%;
+  
+
+
+}
+/* _________________ end contact _____________________ */
